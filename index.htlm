@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Escritório de advocacia especializado em direito ambiental. Proteção do meio ambiente e assessoria jurídica.">
+    <title>Advocacia Ambiental</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Advocacia Ambiental</h1>
+        <p>Proteja o futuro, defenda o meio ambiente com soluções jurídicas eficazes.</p>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos um escritório de advocacia especializado em Direito Ambiental. Oferecemos soluções jurídicas para empresas, ONGs e indivíduos que buscam cumprir a legislação ambiental, solucionar questões de licenciamento e prevenir impactos negativos ao meio ambiente.</p>
+    </section>
+
+    <section id="servicos" class="servicos">
+        <h2>Serviços</h2>
+        <ul>
+            <li>Consultoria Ambiental</li>
+            <li>Licenciamento Ambiental</li>
+            <li>Defesa em Processos Judiciais Ambientais</li>
+            <li>Compliance Ambiental</li>
+            <li>Assessoria em Gestão de Resíduos</li>
+        </ul>
+    </section>
+
+    <section id="contato" class="contato">
+        <h2>Contato</h2>
+        <form id="contatoForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="mensagemSucesso"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Advocacia Ambiental. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
