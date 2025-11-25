@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROMAN ADVOGADOS ASSOCIADOS</title>
+<link rel="icon" href="img/logo.ico" type="image/x-icon">
+
+<!-- CSS -->
+<style>
+:root {
+    --accent: #8B5CF6;
+    --text: #fff;
+    --bg: #000;
+    --muted: #111;
+    --muted2: #222;
+    --font-primary: "Times New Roman", serif;
+    --radius: 6px;
+    --transition: .3s ease;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background: var(--bg); color: var(--text); font-family: var(--font-primary); line-height:1.6; scroll-behavior: smooth; }
+img { display:block; max-width:100%; }
+.container { width:92%; max-width:1200px; margin:auto; }
+
+/* Header */
+.top-bar { background: var(--bg); border-bottom:1px solid var(--muted2); padding:14px 0; position:sticky; top:0; z-index:100; }
+.top-bar-content { display:flex; justify-content:space-between; align-items:center; }
+.logo { height:65px; object-fit:contain; }
+.top-bar nav a { margin-left:28px; text-decoration:none; color: var(--text); font-weight:bold; transition: var(--transition); }
+.top-bar nav a:hover { color: var(--accent); }
+
+/* Hero */
+.hero { position:relative; height:78vh; display:flex; justify-content:center; align-items:center; text-align:center; }
+.hero-bg { position:absolute; width:100%; height:100%; object-fit:cover; opacity:0.6; }
+.hero-overlay { background: rgba(0,0,0,0.6); position:absolute; width:100%; height:100%; }
+.hero-content { position:relative; z-index:2; padding:0 20px; }
+.hero h1 { font-size:2.8rem; margin-bottom:10px; }
+.hero p { font-size:1.3rem; font-style:italic; }
+.btn-accent { display:inline-flex; align-items:center; gap:8px; margin-top:25px; padding:14px 32px; background:var(--accent); color:#fff; border-radius:var(--radius); text-decoration:none; font-size:1.1rem; transition:var(--transition); }
+.btn-accent:hover { opacity:0.85; }
+
+/* Carrossel */
+.carousel-section { padding:70px 0; background:var(--muted); }
+.carousel-section h2 { text-align:center; margin-bottom:40px; font-size:2rem; }
+.swiper-slide img { width:100%; height:420px; object-fit:cover; border-radius:var(--radius); }
+.swiper-button-next, .swiper-button-prev { color:var(--accent); }
+.swiper-pagination-bullet-active { background:var(--accent); }
+
+/* Seções gerais */
+section { padding:70px 0; }
+section h2 { text-align:center; margin-bottom:30px; }
+
+/* Serviços */
+.service-list { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+.service-item { background:var(--muted2); padding:20px; border-radius:var(--radius); width:260px; text-align:center; transition:var(--transition); }
+.service-item img { height:120px; object-fit:cover; border-radius:var(--radius); margin-bottom:15px; }
+.service-item:hover { transform:scale(1.05); }
+
+/* Notícias */
+.news-list { max-width:900px; margin:0 auto; }
+.news-item { background:var(--muted2); padding:20px; border-radius:var(--radius); margin-bottom:20px; }
+.news-item h3 { margin-bottom:10px; }
+.news-item p { font-size:1rem; }
+
+/* Política */
+.privacy p { max-width:900px; margin:0 auto 15px auto; font-size:1rem; }
+
+/* Contato */
+.contact p { margin-bottom:12px; font-size:1.05rem; }
+.contact a { color:var(--accent); text-decoration:none; font-weight:bold; transition:var(--transition); }
+.contact a:hover { opacity:0.8; }
+.contact img { vertical-align:middle; height:22px; margin-right:6px; }
+
+/* Footer */
+.footer { background: var(--text); color:#fff; text-align:center; padding:22px 0; font-size:0.95rem; }
+
+/* Responsividade */
+@media (max-width:768px){
+    .top-bar-content { flex-direction:column; gap:12px; }
+    .hero { height:65vh; }
+    .hero h1 { font-size:2.2rem; }
+    .hero p { font-size:1.1rem; }
+    .swiper-slide img { height:320px; }
+    .service-item { width:100%; max-width:320px; }
+}
+@media (max-width:480px){
+    .hero h1 { font-size:1.8rem; }
+    .btn-accent { padding:12px 26px; }
+    .swiper-slide img { height:260px; }
+}
+</style>
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="top-bar">
+    <div class="container top-bar-content">
+        <img src="img/logo.jpg" alt="Roman Advogados Associados" class="logo">
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#noticias">Notícias</a>
+            <a href="#politica">Política</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <img src="img/escritorio-hero.jpg" class="hero-bg" alt="Escritório Roman Advogados">
+    <div class="hero-content">
+        <h1>ROMAN ADVOGADOS ASSOCIADOS</h1>
+        <p>Excelência jurídica com foco em resultados</p>
+        <a href="https://wa.me/5547999993333" class="btn-accent">
+            <img src="img/whatsapp.png" alt="WhatsApp"> Fale Conosco
+        </a>
+    </div>
+</section>
+
+<!-- CARROSSEL -->
+<section class="carousel-section">
+    <div class="container">
+        <h2>Nosso Escritório</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/carrossel-1.jpg" alt="Escritório 1"></div>
+                <div class="swiper-slide"><img src="img/carrossel-2.jpg" alt="Escritório 2"></div>
+                <div class="swiper-slide"><img src="img/carrossel-3.jpg" alt="Escritório 3"></div>
+                <div class="swiper-slide"><img src="img/carrossel-4.jpg" alt="Escritório 4"></div>
+                <div class="swiper-slide"><img src="img/carrossel-5.jpg" alt="Escritório 5"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+    <div class="container">
+        <h2>Sobre Nós</h2>
+        <p>Roman Advogados Associados é um escritório focado em excelência jurídica e resultados para nossos clientes.</p>
+    </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+    <div class="container">
+        <h2>Áreas de Atuação</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <img src="img/servico-1.jpg" alt="Direito Internacional">
+                <h3>Direito Internacional</h3>
+            </div>
+            <div class="service-item">
+                <img src="img/servico-2.jpg" alt="Propriedade Intelectual">
+                <h3>Direito da Propriedade Intelectual</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NOTÍCIAS -->
+<section id="noticias">
+    <div class="container">
+        <h2>Notícias</h2>
+        <div class="news-list">
+            <div class="news-item">
+                <h3>Nova Lei de Propriedade Intelectual</h3>
+                <p>Atualizações recentes na legislação de propriedade intelectual impactam empresas e inventores.</p>
+            </div>
+            <div class="news-item">
+                <h3>Consultoria Internacional para Empresas</h3>
+                <p>Nosso escritório oferece suporte jurídico para negócios internacionais com foco em compliance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- POLÍTICA DE PRIVACIDADE -->
+<section id="politica" class="privacy">
+    <div class="container">
+        <h2>Política de Privacidade</h2>
+        <p>Coletamos apenas dados necessários para contato e atendimento jurídico.</p>
+        <p>Não compartilhamos informações pessoais com terceiros.</p>
+        <p>Todos os dados são tratados de acordo com a LGPD (Lei Geral de Proteção de Dados).</p>
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="contact">
+    <div class="container">
+        <h2>Contato</h2>
+        <p><strong>Endereço:</strong> Avenida João Colin 500, América, Joinville, SC, Brasil</p>
+        <p><strong>Telefone:</strong> <a href="tel:+5547999993333">(47) 9999-3333</a></p>
+        <p><strong>Email:</strong> <a href="mailto:contato@romanadvogados.com.br">contato@romanadvogados.com.br</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/5547999993333"><img src="img/whatsapp.png" alt="WhatsApp"> Clique para conversar</a></p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        © <span id="year"></span> ROMAN ADVOGADOS ASSOCIADOS — Joinville/SC/Brasil
+    </div>
+</footer>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- JS -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: { delay: 3500 },
+        pagination: { el: ".swiper-pagination", clickable: true },
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
+    });
+});
+</script>
+
+</body>
+</html>
